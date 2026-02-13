@@ -25,3 +25,9 @@ module "alb" {
 
   depends_on = [module.eks]
 }
+module "rds" {
+  source = "./modules/rds"
+
+  vpc_id            = module.vpc.vpc_id
+  public_subnet_ids = module.vpc.subnet_ids   
+}

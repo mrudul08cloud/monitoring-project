@@ -4,10 +4,9 @@ metadata:
   name: todo-service
   namespace: {{ .Values.namespace }}
 spec:
-  type: {{ .Values.service.type }}
+  type: LoadBalancer
   selector:
     app: todo-app
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: {{ .Values.service.targetPort }}
-      nodePort: {{ .Values.service.nodePort }}
+    - port: 80
+      targetPort: 8080

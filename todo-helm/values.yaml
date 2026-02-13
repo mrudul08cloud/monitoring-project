@@ -11,6 +11,27 @@ service:
   targetPort: 8080
   nodePort: 30018
 
-resources: {}
-
 namespace: todo-dev
+
+resources: {}
+db:
+  url: jdbc:postgresql://todo-postgres.cl6y8uko4auc.ap-south-1.rds.amazonaws.com:5432/tododb
+  username: postgres
+  password: Devops12345
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

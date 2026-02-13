@@ -17,5 +17,14 @@ spec:
         - name: todo-container
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+
           ports:
             - containerPort: 8080
+
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: "{{ .Values.db.url }}"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: "{{ .Values.db.username }}"
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: "{{ .Values.db.password }}"
