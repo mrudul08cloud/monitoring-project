@@ -4,7 +4,7 @@ metadata:
   name: todo-deployment
   namespace: todo-dev
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: todo-app
